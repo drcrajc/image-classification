@@ -45,7 +45,7 @@ Clone the TensorFlow examples GitHub repository to your computer to get the demo
 application.
 
 ```
-https://github.com/image-classificatiob-bubble.git
+https://github.com/drcrajc/image-classification.git
 ```
 
 Open the TensorFlow source code in Android Studio. To do this, open Android
