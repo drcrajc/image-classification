@@ -1,25 +1,100 @@
-<h1 align="center">Hi 👋, I'm Dr. Cyril Robinson Azariah J.</h1>
-<h3 align="center">A passionate frontend developer from Chennai, India</h3>
+# Android Currency Detector App using TensorFlow Lite image classification
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=drcrajc&label=Profile%20views&color=0e75b6&style=flat" alt="drcrajc" /> </p>
+## Overview
 
-- 🔭 I’m currently working on **AI for Nanotechnology and Materials Science**
+This is an example application for [TensorFlow Lite](https://tensorflow.org/lite)
+on Android. It uses
+[Image classification](https://www.tensorflow.org/lite/models/image_classification/overview)
+to continuously classify whatever it sees from the device's back camera.
+Inference is performed using the TensorFlow Lite Java API. The demo app
+classifies frames in real-time, displaying the top most probable
+classifications. It allows the user to choose between a floating point or
+[quantized](https://www.tensorflow.org/lite/performance/post_training_quantization)
+model, select the thread count, and decide whether to run on CPU, GPU, or via
+[NNAPI](https://developer.android.com/ndk/guides/neuralnetworks).
 
-- 🌱 I’m currently learning **Python (LinkedIn), Android developer Course (Coursera)**
+These instructions walk you through building and
+running the demo on an Android device. For an explanation of the source, see
+[TensorFlow Lite Android image classification example](https://www.tensorflow.org/lite/models/image_classification/android).
 
-- 👯 I’m looking to collaborate on **Tensorflow Image Classification and ML and DL examples**
+<!-- TODO(b/124116863): Add app screenshot. -->
 
-- 🤝 I’m looking for help with **coding in Python, Java and Kotlin**
+### Model
+Inside Assests folder zip file is there.
 
-- 📫 How to reach me **prof.crajc@gmail.com**
+Resnet50 
+16 batch size
+100 epochs
+Teachable ML
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/cyrilrajc" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="cyrilrajc" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/dr.cyril's spacehub" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="dr.cyril's spacehub" height="30" width="40" /></a>
-</p>
+## Requirements
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kotlinlang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/> </a> <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> <a href="https://dotnet.microsoft.com/apps/xamarin" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/xamarin.svg" alt="xamarin" width="40" height="40"/> </a> <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/adobe-xd.svg" alt="xd" width="40" height="40"/> </a> </p>
+*   Android Studio 3.2 (installed on a Linux, Mac or Windows machine)
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=drcrajc&show_icons=true&locale=en&layout=compact" alt="drcrajc" /></p>
+*   Android device in
+    [developer mode](https://developer.android.com/studio/debug/dev-options)
+    with USB debugging enabled
+
+*   USB cable (to connect Android device to your computer)
+
+## Build and run
+
+### Step 1. Clone the TensorFlow examples source code
+
+Clone the TensorFlow examples GitHub repository to your computer to get the demo
+application.
+
+```
+https://github.com/AndroidArena/CurrencyDetectorAndroid.git
+```
+
+Open the TensorFlow source code in Android Studio. To do this, open Android
+Studio and select `Open an existing project`, setting the folder to
+`examples/lite/examples/image_classification/android`
+
+<img src="images/classifydemo_img1.png?raw=true" />
+
+### Step 2. Build the Android Studio project
+
+Select `Build -> Make Project` and check that the project builds successfully.
+You will need Android SDK configured in the settings. You'll need at least SDK
+version 23. The `build.gradle` file will prompt you to download any missing
+libraries.
+
+The file `download.gradle` directs gradle to download the two models used in the
+example, placing them into `assets`.
+
+<img src="images/classifydemo_img4.png?raw=true" style="width: 40%" />
+
+<img src="images/classifydemo_img2.png?raw=true" style="width: 60%" />
+
+<aside class="note"><b>Note:</b><p>`build.gradle` is configured to use
+TensorFlow Lite's nightly build.</p><p>If you see a build error related to
+compatibility with Tensorflow Lite's Java API (for example, `method X is
+undefined for type Interpreter`), there has likely been a backwards compatible
+change to the API. You will need to run `git pull` in the examples repo to
+obtain a version that is compatible with the nightly build.</p></aside>
+
+### Step 3. Install and run the app
+
+Connect the Android device to the computer and be sure to approve any ADB
+permission prompts that appear on your phone. Select `Run -> Run app.` Select
+the deployment target in the connected devices to the device on which the app
+will be installed. This will install the app on the device.
+
+<img src="images/classifydemo_img5.png?raw=true" style="width: 60%" />
+
+<img src="images/classifydemo_img6.png?raw=true" style="width: 70%" />
+
+<img src="images/classifydemo_img7.png?raw=true" style="width: 40%" />
+
+<img src="images/classifydemo_img8.png?raw=true" style="width: 80%" />
+
+To test the app, open the app called `TFL Classify` on your device. When you run
+the app the first time, the app will request permission to access the camera.
+Re-installing the app may require you to uninstall the previous installations.
+
+## Assets folder
+_Do not delete the assets folder content_. If you explicitly deleted the
+files, choose `Build -> Rebuild` to re-download the deleted model files into the
+assets folder.
