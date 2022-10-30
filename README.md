@@ -1,4 +1,4 @@
-# Android Currency Detector App using TensorFlow Lite image classification
+# Android Bubble Classifier App using TensorFlow Lite image classification
 
 ## Overview
 
@@ -45,7 +45,7 @@ Clone the TensorFlow examples GitHub repository to your computer to get the demo
 application.
 
 ```
-https://github.com/AndroidArena/CurrencyDetectorAndroid.git
+https://github.com/image-classificatiob-bubble.git
 ```
 
 Open the TensorFlow source code in Android Studio. To do this, open Android
