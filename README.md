@@ -1,4 +1,4 @@
-# Android Bubble Classifier App using TensorFlow Lite image classification
+# Android Image Classifier App using TensorFlow Lite image classification
 
 ## Overview
 
